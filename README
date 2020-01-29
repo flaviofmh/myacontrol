@@ -17,3 +17,11 @@ The annotaion @RestController and @RequestMapping is Spring MVC annotations (the
 
 We can use line command "mvn package" to create a file jar it will create file into target and this jar you can use
 command line to start with "java -jar target/myproject-0.0.1-SNAPSHOT.jar"
+
+So in this point we version our application using
+
+git init
+git add .
+git commit -m "Example Commit Message"
+git remote add origin https://github.com/user/repo.git
+git push origin master
