@@ -1,0 +1,19 @@
+This application about my learning spring boot in documentation.
+https://docs.spring.io/spring-boot/docs/2.2.4.RELEASE/reference/html/index.html
+
+First all we include in pom:
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+
+In documentation teache instaling spring CLI, but i dont want that. I will do in future to test.
+
+
+Main points in this first section is:
+
+The annotaion @RestController and @RequestMapping is Spring MVC annotations (they are not specific to Spring Boot).
+
+We can use line command "mvn package" to create a file jar it will create file into target and this jar you can use
+command line to start with "java -jar target/myproject-0.0.1-SNAPSHOT.jar"
