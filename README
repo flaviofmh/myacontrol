@@ -24,4 +24,4 @@ git init
 git add .
 git commit -m "Example Commit Message"
 git remote add origin https://github.com/user/repo.git
-git push origin master
+git push -u origin master
