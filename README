@@ -25,3 +25,41 @@ git add .
 git commit -m "Example Commit Message"
 git remote add origin https://github.com/user/repo.git
 git push -u origin master
+
+A good point about spring dependencies is sicronyze all version if you change the dependencie of spring boot.
+	"In practice, you do not need to provide a version for any of these dependencies in your build configuration, as Spring Boot manages that for you."
+	
+And the most importante:
+	"Each release of Spring Boot is associated with a base version of the Spring Framework. We highly recommend that you not specify its version."
+	
+It's here a explanation about packages in java if you dont know what conventions is.
+
+https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html
+
+Put in your class main @EnableAutoConfiguration or @SpringBootApplication to able auto-configuration the spring boot in your project. Never use together this annotations.
+
+To configure our project spring the form sample, the docs of spring sugest include in our main class @ComponentScan without any arguments, that it will register 
+all (@Component, @Service, @Repository, @Controller etc.) as Spring Beans.
+
+reference at website: https://docs.spring.io/spring-boot/docs/2.2.4.RELEASE/reference/html/using-spring-boot.html#using-boot
+
+```java
+package com.example.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class DatabaseAccountService implements AccountService {
+
+    private final RiskAssessor riskAssessor;
+
+    @Autowired
+    public DatabaseAccountService(RiskAssessor riskAssessor) {
+        this.riskAssessor = riskAssessor;
+    }
+
+    // ...
+
+}
+```
