@@ -44,6 +44,7 @@ all (@Component, @Service, @Repository, @Controller etc.) as Spring Beans.
 reference at website: https://docs.spring.io/spring-boot/docs/2.2.4.RELEASE/reference/html/using-spring-boot.html#using-boot
 
 ```java
+
 package com.example.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,4 +63,5 @@ public class DatabaseAccountService implements AccountService {
     // ...
 
 }
+
 ```
